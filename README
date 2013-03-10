@@ -1,0 +1,7 @@
+poly-algebra-sys
+----------------
+
+Description: A computer algebra system specifically designed to handle polynomials over the rationals and the integers, and to work with algebraic numbers.
+
+Compilation: To compile the code, run "make". To compile individual source files in order to test them for correctness, run "make test filename".
+
