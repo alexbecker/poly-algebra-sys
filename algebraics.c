@@ -205,7 +205,9 @@ algebraic *read_algebraic() {
 	polynomial *entered_polynomial = NULL;
 	double root, error;
 	printf("Enter an approximate value for the algebraic number, or press enter if it is unknown: ");
-	if (scanf("%lf", &root)) {	// the user has entered a number
+	char input[256];
+	fgets(input, 256, stdin);
+	if (sscanf(input, "%lf", &root)) {	// the user has entered a number
 		printf("Enter an upper bound for the error: ");
 		scanf("%lf", &error);
 		printf("Enter the minimal polynomial, or \"0\" if it is unknown: ");
