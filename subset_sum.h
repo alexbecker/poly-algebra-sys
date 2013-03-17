@@ -6,10 +6,10 @@
 
 typedef struct subset_sum_problem {
 	int size;
-	entry_type *items;
-	entry_type sum;
+	root_type *items;
+	root_type sum;
 } subset_sum_problem;
 
-int *subset_sum_certificate(subset_sum_problem, entry_type *);
+int *subset_sum_certificate(subset_sum_problem, root_type *);
 
 #endif

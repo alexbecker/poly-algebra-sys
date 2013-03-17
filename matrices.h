@@ -5,17 +5,27 @@
 
 #include "precision.h"
 
-typedef entry_type* vector;
+typedef matrix_entry* vector;
 
 typedef struct matrix {
 	int m, n;	// m rows, n columns
 	vector *entries;	// entries[i] is ith row
 } matrix;
 
-entry_type ineff_det(matrix a);
+matrix *alloc_matrix(int, int);
 
-entry_type eff_det(matrix a);
+void free_matrix(matrix *);
 
-void print_matrix(matrix a);
+matrix *copy_matrix(matrix);
+
+matrix *identity_matrix(int);
+
+vector matrix_eval(matrix, vector);
+
+matrix_entry det(matrix);
+
+matrix *invert_matrix(matrix);
+
+void print_matrix(matrix);
 
 #endif

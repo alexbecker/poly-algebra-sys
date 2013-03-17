@@ -6,8 +6,12 @@
 
 // precision constants:
 #define EVAL_ERR 1e-20
+#define MIN_ROOT_ERR 1e-12
+#define MATRIX_IND_ERR 1e-10
 
-// the precision of functions using entry_type can be changed by changing the following typedef:
-typedef double entry_type;
+// the precision of some functions can be changed by changing the following typedefs:
+typedef __float128 matrix_entry;
+typedef double root_type;
+typedef _Complex double complex;	// precision should be same as root_type
 
 #endif
